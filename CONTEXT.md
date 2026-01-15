@@ -1,5 +1,7 @@
 # killed-all-humans – CONTEXT
 
+Audience: external tools; raw navigation map for docs and code.
+
 Use this file to share direct raw links to key docs and source files when discussing the project in external tools.
 
 Instructions for external tools:

@@ -1,3 +1,6 @@
+# killed-all-humans – AGENTS
+Audience: Codex (workflow rules and constraints).
+
 Codex Guide for killed-all-humans
 
 idea and inspiration

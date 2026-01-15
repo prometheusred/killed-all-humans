@@ -1,5 +1,7 @@
 # killed-all-humans – PROTOCOL
 
+Audience: humans + agents; message schemas for client/server comms.
+
 This document defines client/server WebSocket messages for v0.
 
 ## welcome

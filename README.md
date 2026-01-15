@@ -15,6 +15,17 @@ An experimental multiplayer sandbox and coding playground. v0 focuses on a tiny 
 - `Architecture.md` Canonical architecture and hello-world behavior
 - `Agents.md` Codex workflow rules and guardrails
 - `Protocol.md` Message definitions (when needed)
+- `TODO.md` Active task list and progress tracker
+- `CONTEXT.md` Raw links for external tools
+
+## Doc contract (roles & audience)
+These files are our coordination docs; each has a clear audience and role:
+- `README.md` Human on-ramp, setup, and dev commands.
+- `Agents.md` Codex behavior, constraints, and workflow guidance.
+- `Architecture.md` System design and canonical structure.
+- `Protocol.md` Message schemas for client/server communication.
+- `TODO.md` Living task list and progress tracking.
+- `CONTEXT.md` Raw links for external tools to navigate the repo.
 
 ## Prereqs
 - Python 3.11+

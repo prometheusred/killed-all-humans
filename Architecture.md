@@ -1,5 +1,7 @@
 killed-all-humans – ARCHITECTURE
 
+Audience: humans + agents; canonical system design and structure.
+
 This document describes the high-level architecture for killed-all-humans.
 
 The initial goal (v0) is a “hello world” multiplayer sandbox skeleton:
