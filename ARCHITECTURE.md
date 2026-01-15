@@ -23,9 +23,9 @@ backend/ Python backend (FastAPI + WebSocket + game loop)
 frontend/ TypeScript frontend (Vite + Phaser, managed by pnpm)
 shared/ Shared protocol/types/docs (optional for v0)
 electron/ Electron wrapper around the frontend (for later)
-ARCHITECTURE.md, AGENTS.md, PROTOCOL.md (when created)
+ARCHITECTURE.md, AGENTS.md, PROTOCOL.md
+README.md, TODO.md, CONTEXT.md
 .gitignore
-README.md
 
 1.1 backend/
 
@@ -38,7 +38,7 @@ pyproject.toml
 uv.lock
 src/
 app/
-init.py
+__init__.py
 main.py
 game_loop.py
 state.py
@@ -295,6 +295,25 @@ The hello world architecture is considered validated when:
 The Phaser scene renders successfully.
 
 A dynamic tick value in the scene clearly updates over time, in sync with messages from the Python backend’s game loop.
+
+v1 (next milestone)
+
+Goal: a minimally interactive, multiplayer sandbox with controllable agents.
+
+High-level scope:
+
+- Authoritative server owns unit state and movement.
+- World model uses free-form XY coordinates with simple static obstacles.
+- One controllable agent per connected client (for now).
+- Client input: click to select, click off to deselect, right-click to move.
+- Server receives move intents and advances positions on each tick, including basic obstacle-aware pathing.
+- Client renders positions, basic move indicator, and simple motion cues.
+
+Notes:
+- Movement can start with straight-line motion and simple bounds checks.
+- Dynamic agent avoidance is deferred until after v1.
+- Visuals should be minimal but distinct (e.g., simple robot-like shapes).
+- Tick rate can be increased (e.g., 10–20 Hz) for smoother motion.
 
 Future Extensions (not required for hello world)
 

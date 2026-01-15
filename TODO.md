@@ -9,3 +9,10 @@ Audience: humans + agents; living task list and progress tracker.
 - [x] Wire end-to-end: welcome + live tick counter
 - [x] Add minimal visuals (simple background + animated shape)
 - [x] Commit lockfiles + initial push
+
+## v1 (next)
+- [ ] Define agent state + movement intent protocol
+- [ ] Add static obstacles to world state
+- [ ] Implement basic obstacle-aware movement on server
+- [ ] Add selection + right-click move on client
+- [ ] Render simple agent visuals + move indicator

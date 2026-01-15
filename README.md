@@ -7,6 +7,11 @@ An experimental multiplayer sandbox and coding playground. v0 focuses on a tiny 
 - Render a Phaser scene that displays a welcome message and a live tick counter.
 - Keep the stack minimal and easy to iterate on.
 
+## Goals (v1)
+- Authoritative server movement for simple agents.
+- Client input: select, deselect, right-click move.
+- Minimal world with static obstacles and basic pathing.
+
 ## Repo layout (intended)
 - `backend/` FastAPI + WebSockets game server (Python, uv)
 - `frontend/` Vite + Phaser client (TypeScript, pnpm)
