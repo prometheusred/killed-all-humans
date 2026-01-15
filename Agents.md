@@ -155,6 +155,8 @@ When relevant, share Codex CLI workflow tips or power-user ideas as we go (e.g.,
 
 Keep workspace editor settings (e.g., `.vscode/settings.json`) aligned with the repo's tooling and type-checking expectations.
 
+Keep CONTEXT.md updated with raw GitHub links for sharing key docs and source files with external tools.
+
 hello world objective (for Codex)
 
 For the initial implementation, focus on achieving this end-to-end behavior:

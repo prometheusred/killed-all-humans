@@ -88,6 +88,7 @@ Then open http://localhost:5173 and confirm:
 - This README mirrors the human-facing setup and should be kept consistent with those docs.
 - `TODO.md` tracks v0 tasks and should be kept current as progress is made.
 - `Protocol.md` defines WebSocket message shapes.
+- `CONTEXT.md` provides raw GitHub links for sharing key docs and source files.
 
 ## Notes
 - No LLM integration in v0.
