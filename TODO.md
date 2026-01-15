@@ -11,8 +11,27 @@ Audience: humans + agents; living task list and progress tracker.
 - [x] Commit lockfiles + initial push
 
 ## v1 (next)
-- [ ] Define agent state + movement intent protocol
-- [ ] Add static obstacles to world state
-- [ ] Implement basic obstacle-aware movement on server
-- [ ] Add selection + right-click move on client
-- [ ] Render simple agent visuals + move indicator
+- [ ] 1) Define protocol
+- [ ]    - Add player_id to welcome
+- [ ]    - Add world_state (bounds, obstacles, agents)
+- [ ]    - Add move_intent (agent_id, target)
+- [ ] 2) Build server state
+- [ ]    - Define world bounds (2400x1400)
+- [ ]    - Define static obstacles (AABB rectangles)
+- [ ]    - Track agents (id, owner, position, target, radius)
+- [ ] 3) Handle connections
+- [ ]    - Assign incremental player_id
+- [ ]    - Spawn one agent per connection
+- [ ]    - Broadcast world_state each tick
+- [ ] 4) Implement movement
+- [ ]    - Straight-line motion at ~300 units/sec
+- [ ]    - Circle-vs-rect collision
+- [ ]    - Stop on bounds/obstacle collision
+- [ ] 5) Update client input/render
+- [ ]    - Render agents + obstacles
+- [ ]    - Click to select/deselect
+- [ ]    - Right-click sends move_intent
+- [ ] 6) Smooth visuals
+- [ ]    - Linear interpolation for remote agents
+- [ ] 7) Polish
+- [ ]    - Move indicator + name/ID label

@@ -10,7 +10,7 @@ An experimental multiplayer sandbox and coding playground. v0 focuses on a tiny 
 ## Goals (v1)
 - Authoritative server movement for simple agents.
 - Client input: select, deselect, right-click move.
-- Minimal world with static obstacles and basic pathing.
+- Minimal world bounds + optional simple collision (no pathfinding yet).
 
 ## Repo layout (intended)
 - `backend/` FastAPI + WebSockets game server (Python, uv)

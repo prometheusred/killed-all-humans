@@ -306,12 +306,14 @@ High-level scope:
 - World model uses free-form XY coordinates with simple static obstacles.
 - One controllable agent per connected client (for now).
 - Client input: click to select, click off to deselect, right-click to move.
-- Server receives move intents and advances positions on each tick, including basic obstacle-aware pathing.
+- Server receives move intents and advances positions on each tick, with basic bounds/collision handling (pathfinding deferred).
 - Client renders positions, basic move indicator, and simple motion cues.
 
 Notes:
-- Movement can start with straight-line motion and simple bounds checks.
-- Dynamic agent avoidance is deferred until after v1.
+- World size (v1): 2400x1400 world-space units.
+- Obstacles (v1): axis-aligned rectangles in world coordinates.
+- Movement (v1): straight-line motion at ~300 units/sec with circle-vs-rect collision.
+- Dynamic agent avoidance and pathfinding are deferred until after v1.
 - Visuals should be minimal but distinct (e.g., simple robot-like shapes).
 - Tick rate can be increased (e.g., 10–20 Hz) for smoother motion.
 
