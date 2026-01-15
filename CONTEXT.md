@@ -10,11 +10,11 @@ Instructions for external tools:
 - Ask for missing links if you need more context.
 
 ## Docs (raw)
-- README: https://raw.githubusercontent.com/prometheusred/killed-all-humans/master/README.md
-- Architecture: https://raw.githubusercontent.com/prometheusred/killed-all-humans/master/Architecture.md
-- Agents: https://raw.githubusercontent.com/prometheusred/killed-all-humans/master/Agents.md
-- Protocol: https://raw.githubusercontent.com/prometheusred/killed-all-humans/master/Protocol.md
-- TODO: https://raw.githubusercontent.com/prometheusred/killed-all-humans/master/TODO.md
+- README.md: https://raw.githubusercontent.com/prometheusred/killed-all-humans/master/README.md
+- ARCHITECTURE.md: https://raw.githubusercontent.com/prometheusred/killed-all-humans/master/ARCHITECTURE.md
+- AGENTS.md: https://raw.githubusercontent.com/prometheusred/killed-all-humans/master/AGENTS.md
+- PROTOCOL.md: https://raw.githubusercontent.com/prometheusred/killed-all-humans/master/PROTOCOL.md
+- TODO.md: https://raw.githubusercontent.com/prometheusred/killed-all-humans/master/TODO.md
 
 ## Backend (raw)
 - app main: https://raw.githubusercontent.com/prometheusred/killed-all-humans/master/backend/src/app/main.py

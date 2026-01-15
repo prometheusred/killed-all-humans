@@ -12,18 +12,18 @@ An experimental multiplayer sandbox and coding playground. v0 focuses on a tiny 
 - `frontend/` Vite + Phaser client (TypeScript, pnpm)
 - `shared/` Optional shared protocol/types
 - `electron/` Optional desktop wrapper (later)
-- `Architecture.md` Canonical architecture and hello-world behavior
-- `Agents.md` Codex workflow rules and guardrails
-- `Protocol.md` Message definitions (when needed)
+- `ARCHITECTURE.md` Canonical architecture and hello-world behavior
+- `AGENTS.md` Codex workflow rules and guardrails
+- `PROTOCOL.md` Message definitions (when needed)
 - `TODO.md` Active task list and progress tracker
 - `CONTEXT.md` Raw links for external tools
 
 ## Doc contract (roles & audience)
 These files are our coordination docs; each has a clear audience and role:
 - `README.md` Human on-ramp, setup, and dev commands.
-- `Agents.md` Codex behavior, constraints, and workflow guidance.
-- `Architecture.md` System design and canonical structure.
-- `Protocol.md` Message schemas for client/server communication.
+- `AGENTS.md` Codex behavior, constraints, and workflow guidance.
+- `ARCHITECTURE.md` System design and canonical structure.
+- `PROTOCOL.md` Message schemas for client/server communication.
 - `TODO.md` Living task list and progress tracking.
 - `CONTEXT.md` Raw links for external tools to navigate the repo.
 
@@ -94,11 +94,11 @@ Then open http://localhost:5173 and confirm:
 - Tick counter updates every ~200ms
 
 ## Keeping docs in sync
-- `Architecture.md` is the source of truth for structure and hello-world behavior.
-- `Agents.md` defines Codex behavior and guardrails.
+- `ARCHITECTURE.md` is the source of truth for structure and hello-world behavior.
+- `AGENTS.md` defines Codex behavior and guardrails.
 - This README mirrors the human-facing setup and should be kept consistent with those docs.
 - `TODO.md` tracks v0 tasks and should be kept current as progress is made.
-- `Protocol.md` defines WebSocket message shapes.
+- `PROTOCOL.md` defines WebSocket message shapes.
 - `CONTEXT.md` provides raw GitHub links for sharing key docs and source files.
 
 ## Notes

@@ -23,7 +23,7 @@ backend/ Python backend (FastAPI + WebSocket + game loop)
 frontend/ TypeScript frontend (Vite + Phaser, managed by pnpm)
 shared/ Shared protocol/types/docs (optional for v0)
 electron/ Electron wrapper around the frontend (for later)
-Architecture.md, Agents.md, Protocol.md (when created)
+ARCHITECTURE.md, AGENTS.md, PROTOCOL.md (when created)
 .gitignore
 README.md
 
@@ -65,13 +65,13 @@ wsClient.ts
 
 1.3 shared/
 
-This folder is optional in v0 and can simply store Protocol.md. Later it can contain shared TypeScript and/or Python definitions or schemas that help keep the client and server in sync.
+This folder is optional in v0 and can simply store PROTOCOL.md. Later it can contain shared TypeScript and/or Python definitions or schemas that help keep the client and server in sync.
 
 Example:
 
 shared/
 protocol/
-Protocol.md
+PROTOCOL.md
 
 1.4 electron/
 

@@ -28,9 +28,9 @@ electron/: Electron wrapper (later) – desktop shell around the frontend
 shared/: any shared protocol/types (optional at first)
 
 Documentation lives at repo root for now:
-Architecture.md, Agents.md, Protocol.md (when created).
+ARCHITECTURE.md, AGENTS.md, PROTOCOL.md (when created).
 
-Follow Architecture.md for the current canonical structure.
+Follow ARCHITECTURE.md for the current canonical structure.
 
 tooling rules
 
@@ -72,7 +72,7 @@ architecture rules
 
 The server is authoritative. Clients only send intents and render state; they do not own truth.
 
-WebSocket messages must be JSON and, when defined, must follow Protocol.md.
+WebSocket messages must be JSON and, when defined, must follow PROTOCOL.md.
 
 The backend runs a periodic game loop that updates GameState and broadcasts state messages.
 
@@ -114,15 +114,15 @@ field names and types
 
 example JSON payloads
 
-Architecture.md is the source of truth for high-level layout and hello-world behavior. Keep it consistent with the codebase when making structural changes.
+ARCHITECTURE.md is the source of truth for high-level layout and hello-world behavior. Keep it consistent with the codebase when making structural changes.
 
-Agents.md (this file) is the guide for how Codex should behave. If major workflow changes occur (e.g., new package managers, new layout), update this file.
+AGENTS.md (this file) is the guide for how Codex should behave. If major workflow changes occur (e.g., new package managers, new layout), update this file.
 
 behavior for Codex
 
 When you (Codex) are editing this repo:
 
-Always respect the existing layout described in Architecture.md.
+Always respect the existing layout described in ARCHITECTURE.md.
 
 Use uv for Python dependency management in backend/.
 
@@ -132,7 +132,7 @@ Do not introduce new major dependencies (frameworks, databases, etc.) without:
 
 a clear reason in comments
 
-updating Architecture.md if the architecture changes
+updating ARCHITECTURE.md if the architecture changes
 
 Prefer incremental, minimal changes over large, sweeping rewrites unless explicitly requested.
 
@@ -146,11 +146,11 @@ When uncertain about types or message formats:
 
 propose a clear, simple schema
 
-update Protocol.md accordingly
+update PROTOCOL.md accordingly
 
 keep message shapes symmetric between client (TypeScript types) and server (Pydantic models or equivalent)
 
-Keep README.md and Agents.md aligned on workflow and expectations, but allow each to stay audience-appropriate (human setup vs. Codex behavior).
+Keep README.md and AGENTS.md aligned on workflow and expectations, but allow each to stay audience-appropriate (human setup vs. Codex behavior).
 
 Keep TODO.md current as work progresses so the team can track v0 status and next steps.
 
