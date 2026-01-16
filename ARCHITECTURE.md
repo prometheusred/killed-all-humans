@@ -313,6 +313,8 @@ Notes:
 - World size (v1): 2400x1400 world-space units.
 - Obstacles (v1): axis-aligned rectangles in world coordinates.
 - Movement (v1): straight-line motion at ~300 units/sec with circle-vs-rect collision.
+- Agents (v1): simple robot made from shapes; per-agent color palette.
+- Networking note: v1 uses server-authoritative positions; client prediction + interpolation buffer are deferred.
 - Dynamic agent avoidance and pathfinding are deferred until after v1.
 - Visuals should be minimal but distinct (e.g., simple robot-like shapes).
 - Tick rate can be increased (e.g., 10–20 Hz) for smoother motion.

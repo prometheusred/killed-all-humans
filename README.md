@@ -11,6 +11,7 @@ An experimental multiplayer sandbox and coding playground. v0 focuses on a tiny 
 - Authoritative server movement for simple agents.
 - Client input: select, deselect, right-click move.
 - Minimal world bounds + optional simple collision (no pathfinding yet).
+- Basic agent visuals with per-player color accents.
 
 ## Repo layout (intended)
 - `backend/` FastAPI + WebSockets game server (Python, uv)
