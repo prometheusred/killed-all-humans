@@ -16,17 +16,6 @@ Example:
 {"type":"welcome","message":"what's even the point?","player_id":1}
 ```
 
-## state
-- direction: server -> client
-- fields:
-  - `type`: `"state"`
-  - `tick`: number
-  - `message`: string
-
-Example:
-```json
-{"type":"state","tick":42,"message":"hello from game loop"}
-
 ## world_state
 - direction: server -> client
 - fields:
@@ -52,4 +41,15 @@ Example:
 ```json
 {"type":"move_intent","agent_id":1,"target":{"x":1200,"y":700}}
 ```
+
+## error
+- direction: server -> client
+- fields:
+  - `type`: `"error"`
+  - `code`: string
+  - `message`: string
+
+Example:
+```json
+{"type":"error","code":"invalid_payload","message":"move_intent missing target"}
 ```

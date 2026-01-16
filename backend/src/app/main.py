@@ -40,15 +40,57 @@ async def websocket_endpoint(websocket: WebSocket) -> None:
             try:
                 payload = json.loads(message)
             except json.JSONDecodeError:
+                await websocket.send_json(
+                    {
+                        "type": "error",
+                        "code": "invalid_json",
+                        "message": "payload is not valid JSON",
+                    }
+                )
                 continue
 
             if payload.get("type") == "move_intent":
                 agent_id = payload.get("agent_id")
-                target = payload.get("target", {})
+                target = payload.get("target")
+                if not isinstance(agent_id, int) or not isinstance(target, dict):
+                    await websocket.send_json(
+                        {
+                            "type": "error",
+                            "code": "invalid_payload",
+                            "message": "move_intent requires agent_id and target",
+                        }
+                    )
+                    continue
                 agent = state.agents.get(agent_id)
-                if agent and agent_by_socket.get(websocket) == agent_id:
+                if agent is None:
+                    await websocket.send_json(
+                        {
+                            "type": "error",
+                            "code": "unknown_agent",
+                            "message": "agent_id not found",
+                        }
+                    )
+                    continue
+                if agent_by_socket.get(websocket) != agent_id:
+                    await websocket.send_json(
+                        {
+                            "type": "error",
+                            "code": "not_owner",
+                            "message": "agent_id is not owned by this connection",
+                        }
+                    )
+                    continue
+                try:
                     agent.target_x = float(target.get("x", agent.x))
                     agent.target_y = float(target.get("y", agent.y))
+                except (TypeError, ValueError):
+                    await websocket.send_json(
+                        {
+                            "type": "error",
+                            "code": "invalid_payload",
+                            "message": "target coordinates must be numbers",
+                        }
+                    )
     except WebSocketDisconnect:
         manager.disconnect(websocket)
         player_by_socket.pop(websocket, None)

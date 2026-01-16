@@ -38,3 +38,4 @@ Audience: humans + agents; living task list and progress tracker.
 - [ ]    - Add interpolation buffer for remote agents (render in the past)
 - [x] 7) Polish
 - [x]    - Move indicator + name/ID label
+- [x] 8) Basic error responses (invalid payload, not_owner)
